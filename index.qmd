@@ -1,5 +1,5 @@
 ---
-title: "My First Website"
+title: ""
 execute: 
   echo: false
 ---
@@ -11,6 +11,8 @@ execute:
 
 library(tidyverse)
 ```
+
+
 
 ```{r}
 #| label: diamonds-plot
@@ -29,6 +31,7 @@ diamonds |>
          x = "Carat",
          y = "Price")
 ```
+
 
 
 This is a Quarto website.

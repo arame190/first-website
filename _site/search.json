@@ -2,22 +2,15 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "## About Me",
+    "title": "About Me",
     "section": "",
-    "text": "My name is Arame Sukiasyan, and I graduated from ASUE College. Kane’s Free Data Science Bootcamp"
+    "text": "My name is Arame Sukiasyan, I am 18 years old and I graduated from ASUE College."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "My First Website",
+    "title": "",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "Sources.html",
-    "href": "Sources.html",
-    "title": "Sources",
-    "section": "",
-    "text": "An overview of sources used in my project.\nThese are my sources. Here are some challenges. Quarto websites are awesome."
   }
 ]

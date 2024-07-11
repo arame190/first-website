@@ -1,6 +1,5 @@
 ---
-title: "## About Me"
+title: " About Me"
 ---
 
-My name is **Arame Sukiasyan**, and I graduated from *ASUE College*.
-[Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info)
+My name is **Arame Sukiasyan**, I am 18 years old and I graduated from *ASUE College*.

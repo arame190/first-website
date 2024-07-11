@@ -1,9 +1,7 @@
 project:
   type: website
-
 website:
-  title: "A New Website, second edition"
-    navbar:
+  navbar:
     left:
       - href: index.qmd
         text: Home
@@ -14,7 +12,6 @@ website:
           - href: source-2.qmd
             text: Source 2 
       - about.qmd
-
 format:
   html:
     theme: cosmo

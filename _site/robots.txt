@@ -1,1 +1,1 @@
-Sitemap: https://arame190.quarto.pub/a-new-website/sitemap.xml
+Sitemap: Degrees of Change: Navigating Temperature Variability/sitemap.xml
