@@ -1,16 +1,23 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Degrees of Change: Navigating Temperature Variability",
+    "section": "",
+    "text": "make  mileage\n9     lincoln 11.33333\n8  land rover 11.50000\n3       dodge 13.13514\n10    mercury 13.25000\n\n\n\nAttaching package: 'scales'\n\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nThe relation between humidity and temperature is inversely proportional. If temperature increases, it will reduce relative humidity; thus, the air will become drier. When the temperature decreases, the air will become wetter; therefore, the relative humidity will increase."
+  },
+  {
+    "objectID": "login:signup.html",
+    "href": "login:signup.html",
+    "title": "login/signup",
+    "section": "",
+    "text": "library(shiny)\n\n# Define UI for application\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Login Page\"),\n  \n  # Login panel\n  sidebarLayout(\n    sidebarPanel(\n      textInput(\"username\", \"Username\"),\n      passwordInput(\"password\", \"Password\"),\n      actionButton(\"loginButton\", \"Login\")\n    ),\n    \n    # Main panel\n    mainPanel(\n      textOutput(\"loginStatus\")\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  \n  # Reactive values for login status and credentials\n  loggedIn &lt;- reactiveVal(FALSE)\n  correctUsername &lt;- \"user\"\n  correctPassword &lt;- \"password\"\n  \n  # Observe login button click\n  observeEvent(input$loginButton, {\n    username &lt;- isolate(input$username)\n    password &lt;- isolate(input$password)\n    \n    # Check if username and password are correct\n    if (username == correctUsername && password == correctPassword) {\n      loggedIn(TRUE)\n    } else {\n      showModal(modalDialog(\n        title = \"Login Error\",\n        \"Invalid username or password.\",\n        footer = NULL\n      ))\n    }\n  })\n  \n  # Render login status message\n  output$loginStatus &lt;- renderText({\n    if (loggedIn()) {\n      \"Login successful!\"\n    } else {\n      \"Please login.\"\n    }\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)\n\nShiny applications not supported in static R Markdown documents"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
     "section": "",
     "text": "My name is Arame Sukiasyan, I am 18 years old and I graduated from ASUE College."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]

@@ -1,0 +1,72 @@
+---
+title: "login/signup"
+editor: visual
+---
+
+```{r}
+library(shiny)
+
+# Define UI for application
+ui <- fluidPage(
+  
+  # Application title
+  titlePanel("Login Page"),
+  
+  # Login panel
+  sidebarLayout(
+    sidebarPanel(
+      textInput("username", "Username"),
+      passwordInput("password", "Password"),
+      actionButton("loginButton", "Login")
+    ),
+    
+    # Main panel
+    mainPanel(
+      textOutput("loginStatus")
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output, session) {
+  
+  # Reactive values for login status and credentials
+  loggedIn <- reactiveVal(FALSE)
+  correctUsername <- "user"
+  correctPassword <- "password"
+  
+  # Observe login button click
+  observeEvent(input$loginButton, {
+    username <- isolate(input$username)
+    password <- isolate(input$password)
+    
+    # Check if username and password are correct
+    if (username == correctUsername && password == correctPassword) {
+      loggedIn(TRUE)
+    } else {
+      showModal(modalDialog(
+        title = "Login Error",
+        "Invalid username or password.",
+        footer = NULL
+      ))
+    }
+  })
+  
+  # Render login status message
+  output$loginStatus <- renderText({
+    if (loggedIn()) {
+      "Login successful!"
+    } else {
+      "Please login."
+    }
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+
+
+  
+  
+
+```
